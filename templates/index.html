@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <title>Medical Form</title>
+    <style>
+    body {
+        background-image: url("{{ url_for('static', filename='image.jpg') }}");
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        margin: 0; /* Remove default body margin */
+        font-family: 'Arial', sans-serif; /* Set a default font family */
+    }
+
+    /* Other styles for your content */
+    /* ... */
+
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Detecting Fraudulent Loan Applications Machine Learning</h2>
+        <form action="/" method="post">
+            <div class="form-group">
+                <label for="Gender">Gender</label>
+                <input type="text" id="Gender" name="Gender" required>
+            </div>
+
+            <div class="form-group">
+                <label for="Married">Married</label>
+                <input type="text" id="Married" name="Married" required>
+            </div>
+
+            <div class="form-group">
+                <label for="Dependents">Dependents</label>
+                <input type="text" id="Dependents" name="Dependents" required>
+            </div>
+
+            <div class="form-group">
+                <label for="Education">Education</label>
+                <input type="text" id="Education" name="Education" required>
+            </div>
+
+            <div class="form-group">
+                <label for="Self_Employed">Self_Employed</label>
+                <input type="text" id="Self_Employed" name="Self_Employed" required>
+            </div>
+
+            <div class="form-group">
+                <label for="ApplicantIncome">ApplicantIncome</label>
+                <input type="number" id="ApplicantIncome" name="ApplicantIncome" required>
+            </div>
+
+            <div class="form-group">
+                <label for="CoapplicantIncome">CoapplicantIncome</label>
+                <input type="number" id="CoapplicantIncome" name="CoapplicantIncome" required>
+            </div>
+
+            <div class="form-group">
+                <label for="LoanAmount">LoanAmount</label>
+                <input type="text" id="LoanAmount" name="LoanAmount" required>
+            </div>
+
+            <div class="form-group">
+                <label for="Loan_Amount_Term">Loan_Amount_Term</label>
+                <input type="text" id="Loan_Amount_Term" name="Loan_Amount_Term" required>
+            </div>
+
+            <div class="form-group">
+                <label for="Credit_History">Credit_History</label>
+                <input type="text" id="Credit_History" name="Credit_History">
+            </div>
+
+            <div class="form-group">
+                <label for="Property_area">Property_area</label>
+                <input type="text" id="Property_area" name="Property_area">
+            </div>
+
+            <input type="submit" value="Predict">
+
+          <div class="form-group">
+                <label for="Loan_Status">Loan Status</label>
+                <input type="text" id="Loan_Status" name="Loan_Status" value="{{ Loan_Status }}" readonly>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
